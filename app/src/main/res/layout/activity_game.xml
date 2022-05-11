@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <LinearLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEVEL"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCORE"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="870"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BEST"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1260"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 아아 이거어떻게 꽉 채워!!!! -->
+    <GridLayout
+        android:id="@+id/layout_game"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:alignmentMode="alignBounds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/top_menu">
+
+        <Button
+            android:id="@+id/btn_1"/>
+        <Button
+            android:id="@+id/btn_2"/>
+        <Button
+            android:id="@+id/btn_3"/>
+        <Button
+            android:id="@+id/btn_4"/>
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/btn_6"/>
+        <Button
+            android:id="@+id/btn_7"/>
+        <Button
+            android:id="@+id/btn_8"/>
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/btn_10"/>
+        <Button
+            android:id="@+id/btn_11"/>
+        <Button
+            android:id="@+id/btn_12"/>
+        <Button
+            android:id="@+id/btn_13"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/btn_14"/>
+        <Button
+            android:id="@+id/btn_15"/>
+        <Button
+            android:id="@+id/btn_16"/>
+
+    </GridLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <Button
+        android:id="@+id/btn_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/layout_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1"
+        android:text="RETRY"/>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1"
+        android:text="EXIT"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
