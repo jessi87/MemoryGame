@@ -7,10 +7,11 @@
     tools:context=".GameActivity">
 
     <LinearLayout
-        android:id="@+id/top_menu"
+        android:id="@+id/menu_top"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:orientation="horizontal"
+        android:background="#F8D2DF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,11 +26,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LEVEL"
+                android:textSize="15sp"
                 android:layout_gravity="center"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
+                android:textSize="20sp"
                 android:layout_gravity="center"/>
         </LinearLayout>
 
@@ -43,11 +46,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SCORE"
+                android:textSize="15sp"
                 android:layout_gravity="center"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="870"
+                android:textSize="30sp"
                 android:layout_gravity="center"/>
         </LinearLayout>
 
@@ -57,97 +62,166 @@
             android:orientation="vertical"
             android:layout_gravity="center_vertical"
             android:layout_weight="1">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="BEST"
-                android:layout_gravity="center"/>
+                android:textSize="15sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1260"
+                android:textSize="20sp"
                 android:layout_gravity="center"/>
         </LinearLayout>
     </LinearLayout>
 
-    <!-- 아아 이거어떻게 꽉 채워!!!! -->
-    <GridLayout
-        android:id="@+id/layout_game"
+    <View
+        android:id="@+id/keypad_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/keypad_off"
+        app:layout_constraintBottom_toTopOf="@id/keypad_4"
+        app:layout_constraintEnd_toStartOf="@id/keypad_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_top" />
+
+    <View
+        android:id="@+id/keypad_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/keypad_off"
+        app:layout_constraintBottom_toBottomOf="@id/keypad_1"
+        app:layout_constraintEnd_toStartOf="@id/keypad_3"
+        app:layout_constraintStart_toEndOf="@id/keypad_1"
+        app:layout_constraintTop_toTopOf="@id/keypad_1" />
+
+    <View
+        android:id="@+id/keypad_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/keypad_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/keypad_off"
+        app:layout_constraintStart_toEndOf="@id/keypad_2"
+        app:layout_constraintTop_toTopOf="@id/keypad_1" />
+
+    <View
+        android:id="@+id/keypad_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/keypad_off"
+        app:layout_constraintBottom_toTopOf="@id/keypad_7"
+        app:layout_constraintEnd_toStartOf="@id/keypad_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/keypad_1" />
+
+    <View
+        android:id="@+id/keypad_5"
+        android:layout_width="0dp"
+        android:background="@drawable/keypad_off"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/keypad_4"
+        app:layout_constraintEnd_toStartOf="@id/keypad_6"
+        app:layout_constraintStart_toEndOf="@id/keypad_4"
+        app:layout_constraintTop_toTopOf="@id/keypad_4" />
+
+    <View
+        android:id="@+id/keypad_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/keypad_off"
+        app:layout_constraintBottom_toBottomOf="@id/keypad_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/keypad_5"
+        app:layout_constraintTop_toTopOf="@id/keypad_4" />
+
+    <View
+        android:id="@+id/keypad_7"
+        android:background="@drawable/keypad_off"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_menu"
+        app:layout_constraintEnd_toStartOf="@id/keypad_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/keypad_4" />
+
+    <View
+        android:id="@+id/keypad_8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/keypad_off"
+        app:layout_constraintBottom_toBottomOf="@id/keypad_7"
+        app:layout_constraintEnd_toStartOf="@id/keypad_9"
+        app:layout_constraintStart_toEndOf="@id/keypad_7"
+        app:layout_constraintTop_toTopOf="@id/keypad_7" />
+
+    <View
+        android:id="@+id/keypad_9"
+        android:layout_width="0dp"
+        android:background="@drawable/keypad_off"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/keypad_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/keypad_8"
+        app:layout_constraintTop_toTopOf="@id/keypad_7" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_menu"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:columnCount="4"
-        android:rowCount="4"
-        android:alignmentMode="alignBounds"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/keypad_7">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RETRY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EXIT"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_count_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="70sp"
+        android:textColor="#FFFFFF"
+        android:text="3"
+        app:layout_constraintTop_toTopOf="@id/keypad_2"
+        app:layout_constraintBottom_toBottomOf="@id/keypad_8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        />
 
-        app:layout_constraintTop_toBottomOf="@+id/top_menu">
-
-        <Button
-            android:id="@+id/btn_1"/>
-        <Button
-            android:id="@+id/btn_2"/>
-        <Button
-            android:id="@+id/btn_3"/>
-        <Button
-            android:id="@+id/btn_4"/>
-        <Button
-            android:id="@+id/btn_5"
-            android:layout_marginTop="10dp"/>
-        <Button
-            android:id="@+id/btn_6"/>
-        <Button
-            android:id="@+id/btn_7"/>
-        <Button
-            android:id="@+id/btn_8"/>
-        <Button
-            android:id="@+id/btn_9"
-            android:layout_marginTop="10dp"/>
-        <Button
-            android:id="@+id/btn_10"/>
-        <Button
-            android:id="@+id/btn_11"/>
-        <Button
-            android:id="@+id/btn_12"/>
-        <Button
-            android:id="@+id/btn_13"
-            android:layout_marginTop="10dp"/>
-        <Button
-            android:id="@+id/btn_14"/>
-        <Button
-            android:id="@+id/btn_15"/>
-        <Button
-            android:id="@+id/btn_16"/>
-
-    </GridLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"/>
-
-    <Button
-        android:id="@+id/btn_retry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/layout_game"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_weight="1"
-        android:text="RETRY"/>
-
-    <Button
-        android:id="@+id/btn_exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_game"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_weight="1"
-        android:text="EXIT"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
